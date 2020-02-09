@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "haircare",
+  "builds": [
+    {
+      "src": "haircare/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "haircare/$1" }]
+}

@@ -21,12 +21,97 @@ const Container = styled.div`
   margin-top: 20%;
   width: 50%;
 `;
+// const AddForm = props => {
+//   const { Add } = props;
+//   const history = useHistory();
+
+//   console.log("hello");
+
+//   const [add, addText] = useState({
+//     description: "",
+//     rating: 0,
+//     image_1: "",
+//     image_2: "",
+//     image_3: "",
+//     customer_id: 0,
+//     stylist_id: 1
+//   });
+
+//   const handleAdd = e => {
+//     return addText({
+//       ...add,
+//       [e.target.name]: e.target.value
+//     });
+//   };
+
+//   const handleStars = e => {
+//     return addText({
+//       ...add,
+//       rating: e
+//     });
+//   };
+
+//   return (
+//     <div className="star-reviews">
+//       <h1>Add A Review</h1>
+//       <Container>
+//         <form
+//           onSubmit={e => {
+//             e.preventDefault();
+//             // Add({
+//             //   ...add,
+//             //   id: parseInt(Math.floor(Math.random() * 100), 10)
+//             // });
+
+//             Add(add);
+//             addText({
+//               description: "",
+//               rating: 0,
+//               image_1: "",
+//               image_2: "",
+//               image_3: "",
+//               customer_id: 0,
+//               stylist_id: 1
+//             });
+//             history.push("/dashboard");
+//           }}
+//         >
+//           <div className="add-review">
+//             <input
+//               className="review-text"
+//               onChange={handleAdd}
+//               type="text"
+//               name="description"
+//               value={add.description}
+//               placeholder="Review"
+//               required
+//             ></input>
+
+//             <ReactStars
+//               className="stars"
+//               count={5}
+//               name="rating"
+//               onChange={handleStars}
+//               value={add.rating}
+//               size={24}
+//               color2={"#ffd700"}
+//               required
+//             />
+//             <Button type="submit">Add Review</Button>
+//           </div>
+//         </form>
+//       </Container>
+//     </div>
+//   );
+// };
+
 const AddForm = props => {
   const { Add } = props;
   const history = useHistory();
-
-  console.log("hello");
-
+  // ID GENERATOR
+  const idValue = `${Math.floor(Math.random() * 100)}${Math.floor(
+    Math.random() * 100
+  )}`;
   const [add, addText] = useState({
     description: "",
     rating: 0,
@@ -34,23 +119,21 @@ const AddForm = props => {
     image_2: "",
     image_3: "",
     customer_id: 0,
-    stylist_id: 1
+    stylist_id: 1,
+    id: null
   });
-
   const handleAdd = e => {
     return addText({
       ...add,
       [e.target.name]: e.target.value
     });
   };
-
   const handleStars = e => {
     return addText({
       ...add,
       rating: e
     });
   };
-
   return (
     <div className="star-reviews">
       <h1>Add A Review</h1>
@@ -58,12 +141,10 @@ const AddForm = props => {
         <form
           onSubmit={e => {
             e.preventDefault();
-            // Add({
-            //   ...add,
-            //   id: parseInt(Math.floor(Math.random() * 100), 10)
-            // });
-
-            Add(add);
+            Add({
+              ...add,
+              id: parseInt(idValue, 10)
+            });
             addText({
               description: "",
               rating: 0,
@@ -86,7 +167,6 @@ const AddForm = props => {
               placeholder="Review"
               required
             ></input>
-
             <ReactStars
               className="stars"
               count={5}

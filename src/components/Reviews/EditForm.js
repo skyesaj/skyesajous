@@ -31,18 +31,16 @@ const EditForm = ({ content, Update }) => {
     image_2: "",
     image_3: "",
     customer_id: 0,
-    stylist_id: 1
+    stylist_id: 1,
+    id: content.id
   });
-
   const history = useHistory();
-
   const handleStars = e => {
     return setText({
       ...text,
       rating: e
     });
   };
-
   const handleChange = e => {
     setText({
       ...text,
@@ -89,12 +87,85 @@ const EditForm = ({ content, Update }) => {
             onChange={handleStars}
             // required
           />
-
           <Button type="submit">Submit a Review</Button>
         </div>
       </form>
     </Container>
   );
 };
+
+// const EditForm = ({ content, Update }) => {
+//   const [text, setText] = useState({
+//     description: content.description,
+//     rating: 0,
+//     image_1: "",
+//     image_2: "",
+//     image_3: "",
+//     customer_id: 0,
+//     stylist_id: 1
+//   });
+
+//   const history = useHistory();
+
+//   const handleStars = e => {
+//     return setText({
+//       ...text,
+//       rating: e
+//     });
+//   };
+
+//   const handleChange = e => {
+//     setText({
+//       ...text,
+//       [e.target.name]: e.target.value
+//     });
+//   };
+//   return (
+//     <Container>
+//       <form
+//         onSubmit={e => {
+//           e.preventDefault();
+//           console.log(text);
+//           Update(text);
+//           setText({
+//             description: content.description,
+//             rating: 0,
+//             image_1: "",
+//             image_2: "",
+//             image_3: "",
+//             customer_id: 0,
+//             stylist_id: 1
+//           });
+//           history.push("/dashboard");
+//         }}
+//       >
+//         <div className="review-stars">
+//           <input
+//             className="review-text"
+//             onChange={handleChange}
+//             type="text"
+//             name="description"
+//             value={text.description}
+//             placeholder="Review"
+//             required
+//           ></input>
+//           <ReactStars
+//             className="stars"
+//             // edit={false}
+//             count={5}
+//             value={text.rating}
+//             size={24}
+//             color2={"#ffd700"}
+//             name="rating"
+//             onChange={handleStars}
+//             // required
+//           />
+
+//           <Button type="submit">Submit a Review</Button>
+//         </div>
+//       </form>
+//     </Container>
+//   );
+// };
 
 export default connect(null, { Update })(EditForm);
