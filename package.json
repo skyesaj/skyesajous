@@ -1,0 +1,53 @@
+{
+  "name": "build-week-two",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "formik": "^2.1.4",
+    "gsap": "^3.1.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-event-listener": "^0.6.6",
+    "react-images-upload": "^1.2.7",
+    "react-map-gl": "^5.2.2",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.1",
+    "react-select": "^3.0.8",
+    "react-stars": "^2.2.5",
+    "react-tap-event-plugin": "^3.0.3",
+    "react-virtualized": "^9.21.2",
+    "react-virtualized-select": "^3.1.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.88.2",
+    "styled-components": "^5.0.1",
+    "yup": "^0.28.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
