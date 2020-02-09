@@ -73,6 +73,7 @@ const Dashboard = ({ setContent }) => {
         <Link to="/addform">
           <Button className="add-review">Add Review </Button>
         </Link>
+        <footer>Copyright Skye Sajous 2020</footer>
 
         {/* <Route exact path="/addform" component={AddForm} /> */}
         <Route path="/signup" component={Login} />

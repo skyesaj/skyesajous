@@ -6,7 +6,7 @@ import MapSearch from "../Stylist/MapSearch";
 export default function SearchStylist() {
   return (
     <div>
-      <h1>Search Stylist</h1>
+      {/* <h1>Search Stylist</h1> */}
       <MapSearch />
     </div>
   );

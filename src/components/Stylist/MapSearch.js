@@ -81,6 +81,7 @@ const MapSearch = () => {
           </div>
         </div>
       </nav>
+      <h1>Search For Stylist In Your Area</h1>
       <div className="search-map">
         <input
           type="text"

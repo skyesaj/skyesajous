@@ -114,6 +114,7 @@ function StylistForm(props) {
         </Button>
         <Link to="/search"></Link>
       </form>
+      <footer>Copyright Skye Sajous 2020</footer>
     </div>
   );
 }

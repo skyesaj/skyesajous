@@ -81,9 +81,13 @@ a {
 .search-map {
   /* background: #ffffff url(images/search.png) no-repeat 4px 4px; */
   padding: 4px 4px 4px 22px;
-  border: 1px solid #cccccc;
-  width: 700px;
+  /* border: 68px solid #d3b8b8; */
+  width: 767px;
   height: 700px;
+  /* position: absolute; */
+  margin: 90px;
+  right: 200px;
+  margin: 0 auto;
 }
 
 html {
@@ -108,7 +112,7 @@ h1 {
 input {
   font-family: "Arial";
   color: rgb(153, 77, 0);
-  background-color: #d3b8b8;
+  /* background-color: #d3b8b8; */
   font-size: 10pt;
   /* width: 100px; */
   padding: 13px;
@@ -180,6 +184,7 @@ select {
 .submit {
   background-color: #d6a567;
 }
+
 .form {
   margin: 0 auto;
   /* display: flex; */
@@ -197,10 +202,8 @@ select {
   box-shadow: 0px 0px 5px rgba(187, 177, 177, 0.71);
 }
 form {
-  /* margin: 0 auto; */
-  /* display: flex; */
+  margin: 0 auto;
   align-items: center;
-  /* padding-bottom: 50px; */
   padding: 22px;
   font-size: 20px;
   border-width: 2px;
@@ -211,6 +214,12 @@ form {
   border-style: solid;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(187, 177, 177, 0.71);
+  /* position: absolute; */
+  top: 322px;
+  /* height: 550px; */
+  width: 472px;
+
+  justify-content: space-around;
 }
 .button {
   color: #d6a567;
@@ -239,6 +248,13 @@ button {
   display: flex;
 }
 
+footer {
+  /* position: relative */
+  margin-top: 723px;
+  /* negative value of footer height */
+  height: 100px;
+  clear: both;
+}
 .Container-review {
   /* padding: 68px; */
 }
@@ -267,7 +283,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: rgb(228, 206, 221);
+  /* background: rgb(228, 206, 221); */
   color: rgb(195, 116, 51);
 }
 

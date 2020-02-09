@@ -93,6 +93,7 @@ class Login extends Component {
         </nav>
 
         <h1>Welcome Hair Lovers</h1>
+
         <Container>
           <form onSubmit={this.handleSubmit}>
             <input
@@ -123,6 +124,7 @@ class Login extends Component {
             </Button>
           </form>
         </Container>
+        <footer>Copyright Skye Sajous 2020</footer>
       </div>
     );
   }

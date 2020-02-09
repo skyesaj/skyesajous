@@ -13,9 +13,15 @@ const Button = styled.button`
 `;
 const Container = styled.div`
   text-align: center;
+  align-items: center;
   margin: 0 auto;
   margin-top: 20%;
-  width: 50%;
+  width: 40%;
+  // position: fixed;
+  // top: 400px;
+  // bottom: 400px;
+  // right: 50;
+  // display: flex;:
 `;
 class SignUpForm extends Component {
   constructor() {
@@ -100,49 +106,49 @@ class SignUpForm extends Component {
             </div>
           </div>
         </nav>
+        <h1>Sign Up</h1>
         <Container>
           <form onSubmit={this.handleSubmit}>
-            <div>
-              <label>username:</label>
-              <input
-                className="text"
-                type="text"
-                name="username"
-                onChange={this.handleChange}
-                value={this.state.customer.username}
-              ></input>
+            <label>username:</label>
+            <input
+              className="text"
+              type="text"
+              name="username"
+              onChange={this.handleChange}
+              value={this.state.customer.username}
+            ></input>
 
-              <label>Password:</label>
-              <input
-                className="text"
-                type="text"
-                name="password"
-                onChange={this.handleChange}
-                value={this.state.customer.password}
-              ></input>
-              <div className="text">
-                <label>Email:</label>
-                <input
-                  className="text"
-                  type="text"
-                  name="email"
-                  onChange={this.handleChange}
-                  value={this.state.customer.email}
-                ></input>
-              </div>
-              <label>Location:</label>
-              <input
-                className="text"
-                type="text"
-                name="location"
-                onChange={this.handleChange}
-                value={this.state.customer.location}
-              ></input>
-            </div>
+            <label>Password:</label>
+            <input
+              className="text"
+              type="text"
+              name="password"
+              onChange={this.handleChange}
+              value={this.state.customer.password}
+            ></input>
+
+            <label>Email:</label>
+            <input
+              className="text"
+              type="text"
+              name="email"
+              onChange={this.handleChange}
+              value={this.state.customer.email}
+            ></input>
+
+            <label>Location:</label>
+            <input
+              className="text"
+              type="text"
+              name="location"
+              onChange={this.handleChange}
+              value={this.state.customer.location}
+            ></input>
 
             <Button type="submit"> Add customer</Button>
           </form>
         </Container>
+        <footer>Copyright Skye Sajous 2020</footer>
       </div>
     );
   }

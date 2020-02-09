@@ -11,8 +11,8 @@ const Button = styled.button`
   color: rgb(195, 116, 51);
   margin: 0.5em 1em;
   padding: 0.25em 1em;
-  font-size: 2rem;
-  border-radius: 15px;
+  font-size: 1rem;
+  border-radius: 8px;
 `;
 const ReviewCard = props => {
   const { content, Delete, setContent } = props;

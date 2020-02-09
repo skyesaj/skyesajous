@@ -101,6 +101,7 @@ class CustomerProfile extends React.Component {
               </div>
             </div>
           </nav>
+          <h1>Customer Profile</h1>
           <Container>
             <form className="form" action="send_mail" method="post">
               <h2>Profile</h2>
@@ -113,21 +114,21 @@ class CustomerProfile extends React.Component {
                   name="customer-description"
                   required
                 ></textarea>
-              </div>
-              <FileInput />
-              <div className="fix">
+
+                <FileInput />
+
                 {/* <button onClick={this.state.handleClick} type="submit"> */}
                 <div className="material-icons" onClick={this.props}>
                   Save Profile
+                  {/* </button> */}
+                  <button onClick={this.handleClick} type="submit">
+                    <i class="material-icons">add</i>
+                  </button>
                 </div>
-                {/* </button> */}
-
-                <button onClick={this.handleClick} type="submit">
-                  <i class="material-icons">add</i>
-                </button>
               </div>
             </form>
           </Container>
+          <footer>Copyright Skye Sajous 2020</footer>
         </div>
       );
     }
